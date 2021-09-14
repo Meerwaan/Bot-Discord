@@ -41,7 +41,7 @@ client.on("messageCreate", message => {
     if (!command) return;
 
     try {
-        command.execute(client, message, args);
+        command.execute(client, message.channel, args);
     } catch (error) {
         console.error(error);
         return message.channel.send("Erreur de la commande. ");
